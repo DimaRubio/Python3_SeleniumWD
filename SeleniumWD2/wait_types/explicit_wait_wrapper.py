@@ -17,9 +17,9 @@ class ExplicitWaitWrapper:
                                                                                    ElementNotSelectableException])
 
             element = wait.until(EC.element_to_be_clickable((By.ID, locator)))
+            print("success")
         except:
             print("Element not found on the web page")
             print_stack()
 
-        print("success")
         return element
