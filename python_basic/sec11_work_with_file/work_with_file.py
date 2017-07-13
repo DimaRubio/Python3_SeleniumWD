@@ -1,8 +1,8 @@
 class FileWrapper:
 
-    def write_list_to_file(self, l, file_name, mode):
+    def write_list_to_file(self, list_arg, file_name, mode):
         my_file = open(file_name, mode)
-        for item in l:
+        for item in list_arg:
             my_file.write(str(item) + "\n")
         my_file.close()
 

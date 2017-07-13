@@ -2,7 +2,8 @@ from python_basic.sec5_boolean_operation.comparators import Age
 
 def calculate_age():
     answer="yes"
-    while answer == "yes" or answer == "y":
+    answer_list = ("yes", "y")
+    while answer in answer_list:
         x = float(input("your age?: "))
         obj = Age()
         obj.calculate_age(x)
