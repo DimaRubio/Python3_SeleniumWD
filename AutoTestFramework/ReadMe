@@ -1,0 +1,9 @@
+For running DDT type command "py.test -s -v tests/home/test_invalidEnrollment.py --browser firefox --html=report.html"
+For running test-suite type command "py.test -s -v tests/test_suite.py --browser firefox --html=report.html"
+"
+
+For skiping test "@pytest.mark.skip(reason="login take out in preconditions")"
+
+DDT marks attributes:
+    @data(("JavaScript", "10", "1220", "10", "RU"), ("Python 3 from scratch", "20", "1220", "20", "RU"))
+    @unpack
