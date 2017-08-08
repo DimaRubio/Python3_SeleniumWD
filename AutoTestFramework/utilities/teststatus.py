@@ -9,7 +9,6 @@ class TestStatus(SeleniumDriver):
 
     def __init__(self, driver):
         super().__init__(driver)
-        # self.driver = driver
         self.result_List = []
 
     def setResult(self, result, resultMessage):

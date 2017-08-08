@@ -47,20 +47,3 @@ def browser(request):
 @pytest.fixture(scope="session")
 def osType(request):
     return request.config.getoption("--osType")
-
-
-# def pytest_exception_interact(node, call, report):
-#     driver = node.instance.driver
-#
-#     fileName = str(round(time.time() * 1000)) + ".png"
-#     screenshotDirectory = "../screenshots/"
-#     relativeFileName = screenshotDirectory + fileName
-#     currentDirectory = os.path.dirname(__file__)
-#     destinationFile = os.path.join(currentDirectory, relativeFileName)
-#     destinationDirectory = os.path.join(currentDirectory, screenshotDirectory)
-#     try:
-#         if not os.path.exists(destinationDirectory):
-#             os.makedirs(destinationDirectory)
-#         driver.save_screenshot(destinationFile)
-#     except:
-#         print_stack()

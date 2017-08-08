@@ -38,16 +38,15 @@ class SeleniumDriver():
         element = None
         try:
             byType = self.getByType(locatorType)
-            print("Waiting for maximum :: " + str(timeout) +
-                  " :: seconds for element to be clickable")
+            print("Waiting element with locator \"{0}\" not found on the web page during {1} sec. Details: {1}".format(locator, str(timeout)))
             wait = WebDriverWait(self.driver, timeout, poll_frequency=pollFrequency,
                                  ignored_exceptions=[NoSuchElementException,
                                                      ElementNotVisibleException,
                                                      ElementNotSelectableException])
-            element = wait.until(EC.element_to_be_clickable((byType,"stopFilter_stops-0")))
-            print("Element appeared on the web page")
-        except:
-            print("Element not appeared on the web page")
+            element = wait.until(EC.element_to_be_clickable((byType, locator)))
+            print("success")
+        except TimeoutException as ex:
+            print("Element with locator \"{0}\" not found on the web page during 20 sec. Details: {1}".format(locator, str(ex)))
             print_stack()
         return element
 
@@ -68,7 +67,7 @@ class SeleniumDriver():
             self.driver.save_screenshot(destinationFile)
             self.log.info("Screenshot save to directory: " + destinationFile)
         except:
-            self.log.error("### Exception Occurred when taking screenshot")
+            self.log.error("### Exception occurred when taking screenshot")
             print_stack()
 
 

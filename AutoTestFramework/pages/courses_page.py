@@ -16,41 +16,7 @@ class CoursesPage(BasePage):
     def __init__(self, driver):
         super().__init__(driver)
         self.driver = driver
-#First
-    # def login(self, email, password):
-    #     loginItem = self.driver.find_element(By.XPATH, "//a[@href='/sign_in']")
-    #     loginItem.click()
-    #
-    #     emailField = self.driver.find_element(By.ID, "user_email")
-    #     emailField.send_keys(email)
-    #
-    #     passwordField = self.driver.find_element(By.ID, "user_password")
-    #     passwordField.send_keys(password)
-    #
-    #     loginButton = self.driver.find_element(By.XPATH, "//input[@value='Log In']")
-    #     loginButton.click()
 
-#second(last)
-
-    # def clickLoginLink(self):
-    #     self.elementClick(self._login_link, locatorType="xpath")
-    #
-    # def enterEmail(self, email):
-    #     self.sendKeys(email, self._email_field)
-    #
-    # def enterPassword(self, password):
-    #     self.sendKeys(password, self._password_field)
-    #
-    # def clickLoginButton(self):
-    #     self.elementClick(self._login_button, locatorType="xpath")
-    #
-    # def login(self, email, password):
-    #     self.clickLoginLink()
-    #     self.enterEmail(email)
-    #     self.enterPassword(password)
-    #     self.clickLoginButton()
-
-#My own implementation
     def getAvatar(self):
         return  self.driver.find_element(By.CSS_SELECTOR, self._avatar)
 
