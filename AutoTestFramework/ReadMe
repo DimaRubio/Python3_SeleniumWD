@@ -1,0 +1,2 @@
+1. For running DDT type command: ```py.test -s -v tests/home/test_invalidEnrollment.py --browser firefox --html=report.html```
+2. For running test-suite type command: ```py.test -s -v tests/test_suite.py --browser firefox --html=report.html```
