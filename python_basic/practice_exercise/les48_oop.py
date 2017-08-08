@@ -1,4 +1,4 @@
-class Fruit():
+class Fruit:
     __weight = None
     def __init__(self):
         print("Base constructor ")

@@ -1,6 +1,6 @@
 class Age:
     def not_equal(self, a, b):
-        return print(a != b)
+        print(a != b)
 
     def calculate_age(self, a):
         if a < 0 or a == 0 or a > 130:

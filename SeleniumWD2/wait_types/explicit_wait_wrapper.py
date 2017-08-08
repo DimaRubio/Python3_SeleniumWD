@@ -18,8 +18,7 @@ class ExplicitWaitWrapper:
 
             element = wait.until(EC.element_to_be_clickable((By.ID, locator)))
             print("success")
-        except:
-            print("Element not found on the web page")
+        except TimeoutException as ex:
+            print("Element with locator \"{0}\" not found on the web page during 20 sec. Details: {1}".format(locator, str(ex)))
             print_stack()
-
         return element
